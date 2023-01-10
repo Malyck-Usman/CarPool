@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_ride_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/primary"
+        app:tabIndicatorColor="@color/white"
+        app:tabRippleColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+        app:tabUnboundedRipple="true">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tb_new"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="NEW" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tb_accepted"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ACCEPTED" />
+
+    </com.google.android.material.tabs.TabLayout>
+    <FrameLayout
+        android:id="@+id/fl_container_br"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ad_margin"
+        android:layout_below="@+id/tl_ride_request" />
+
+    <View
+        android:id="@+id/ad_margin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_above="@id/fl_ad"
+        android:background="@color/black30" />
+    <View
+        android:id="@+id/tb_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/tl_ride_request"
+        android:background="@drawable/bg_toolbar" />
+
+    <FrameLayout
+        android:id="@+id/fl_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/ad_layout_image_to_pdf"
+            layout="@layout/native_ad_layout_small_loading"
+
+            />
+
+        <com.sharerideexpense.easycarpool.Ads.TemplateView
+            android:id="@+id/ad_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:visibility="invisible"
+            app:gnt_template_type="@layout/gnt_small_template_view" />
+    </FrameLayout>
+</RelativeLayout>
+
+
+

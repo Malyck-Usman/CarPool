@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gravity="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeleton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/cv_new_booking_request_sent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_shadow"
+            android:outlineProvider="background">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_driver_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        app:cardBackgroundColor="@color/primary"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_toStartOf="@+id/iv_route"
+
+                                >
+
+                                <TextView
+                                    android:id="@+id/tv_vehicle_name"
+                                    style="@style/tv_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="honda civic"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_route"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:src="@drawable/icon_route"
+                                app:tint="@color/white" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_minimized_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_below="@id/cv_driver_info"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_route_icons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+                            <ImageView
+                                android:id="@+id/icon_start_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/icon_start_point" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_above="@+id/icon_end_point"
+                                android:layout_below="@+id/icon_start_point"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/icon_timeline"
+                                app:tint="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/icon_end_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/icon_end_point" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_toEndOf="@+id/rl_route_icons">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true">
+
+                                <TextView
+                                    android:id="@+id/pick_up"
+                                    style="@style/tv_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="PICK UP"
+                                    android:textColor="@color/black80"
+                                    android:textSize="@dimen/_10ssp"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_start_point"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_start_point"
+                                    style="@style/tv_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:maxLines="2"
+                                    android:text="PICK LOCATION HERE\n SOME TEXT HERE"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/pick_up" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                app:dividerColor="@color/secondary" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true">
+
+                                <TextView
+                                    android:id="@+id/drop_off"
+                                    style="@style/tv_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="DROP OFF"
+                                    android:textColor="@color/black80"
+                                    android:textSize="@dimen/_10ssp"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_drop_off"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_drop_off"
+                                    style="@style/tv_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:maxLines="2"
+                                    android:text="DROP LOCATION HERE\n SOME TEXT HERE"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/drop_off" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_minimized_view"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_Departure_date_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Time / Date"
+                                android:textColor="@color/black" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_my_departure_time"
+                                    style="@style/tv_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:text="Time"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9ssp"
+
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_my_departure_date"
+                                    style="@style/tv_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_date_time"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_vehicle_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_Departure_date_time"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txt_vehicle_no"
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Vehicle no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_vehicle_no"
+                                style="@style/tv_style"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_toEndOf="@+id/txt_vehicle_no"
+                                android:gravity="end"
+                                android:textColor="@color/black" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_vehicle_no"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_seats_booked_sent_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_vehicle_no"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/tv_seats_booked"
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Seats Booked"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_seats_booking_request_sent"
+                                style="@style/tv_style"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_toEndOf="@+id/tv_seats_booked"
+                                android:gravity="end"
+                                android:textColor="@color/black" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_seats_booking_request_sent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_charges_per_person"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_seats_booked_sent_request"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txt_charges_per_person"
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Charges Per Person"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_charges_per_person"
+                                style="@style/tv_style"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_toEndOf="@+id/txt_charges_per_person"
+                                android:gravity="end"
+                                android:textColor="@color/black" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_charges_per_person"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_rider_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_charges_per_person"
+                            android:layout_marginTop="@dimen/_5sdp">
+                            <TextView
+                                android:id="@+id/txt_rider_no"
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Phone No"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_rider_no"
+                                style="@style/tv_style"
+                                android:layout_width="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_toEndOf="@+id/txt_rider_no"
+                                android:gravity="end"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_rider_no"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rl_seats_booked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_rider_no"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:visibility="gone"
+
+                            >
+
+                            <TextView
+
+                                style="@style/tv_style"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="Booked"
+                                android:textColor="@color/black" />
+
+                            <LinearLayout
+                                android:id="@+id/cg_ride_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_male"
+                                    android:layout_width="@dimen/_50sdp"
+                                    android:layout_height="@dimen/_17sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@drawable/bg_chip"
+                                    android:gravity="center"
+                                    android:text="male"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_female"
+                                    android:layout_width="@dimen/_50sdp"
+                                    android:layout_height="@dimen/_17sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@drawable/bg_chip"
+                                    android:gravity="center"
+                                    android:text="female"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_kid"
+                                    android:layout_width="@dimen/_50sdp"
+                                    android:layout_height="@dimen/_17sdp"
+                                    android:background="@drawable/bg_chip"
+                                    android:gravity="center"
+                                    android:text="kid"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_9ssp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cg_ride_detail"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                app:dividerColor="@color/black20" />
+
+                        </RelativeLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/rl_btn_new_booking_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_seats_booked"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/btn_delete_booking_request_sent"
+                                android:layout_width="@dimen/_110sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/transparent"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/red">
+
+                                    <TextView
+                                        style="@style/tv_style"
+                                        android:layout_centerInParent="true"
+                                        android:text="Cancel Request"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </FrameLayout>
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+</RelativeLayout>

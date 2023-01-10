@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/switch_mode"
+        >
+
+        <item
+            android:id="@+id/nav_switch_to_rider"
+            android:title="Enable Rider Mode"
+            />
+        <!--            android:icon="@drawable/icon_find"-->
+
+
+
+    </group>
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            />
+        <!--            android:icon="@drawable/icon_find"-->
+        <item
+            android:id="@+id/nav_bookings_status"
+            android:title="My Bookings"
+            />
+        <!--            android:icon="@drawable/icon_about"-->
+
+
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            />
+        <!--        android:icon="@drawable/icon_share"-->
+    </group>
+</menu>

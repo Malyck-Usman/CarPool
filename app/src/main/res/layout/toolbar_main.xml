@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/primary"
+    android:gravity="start"
+    app:titleTextColor="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_normal_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:weightSum="8">
+
+        <TextView
+            android:id="@+id/tv_toolbar_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:fontFamily="@font/bariol"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Ride Share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp" />
+
+        <LinearLayout
+            android:id="@+id/ll_search_tb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="end|center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edt_search_tb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/iv_back_tb"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto"
+            android:hint="Search place"
+            android:inputType="text"
+            android:focusedByDefault="true"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black50"
+            android:textCursorDrawable="@drawable/edt_cursor"
+            android:textSize="@dimen/_12ssp"
+            app:boxStrokeColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_back_tb"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignRight="@+id/edt_search_tb"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_close"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
+
+
+

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sharerideexpense.easycarpool.DriverPanel.Activities.ChooseLocationActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <FrameLayout
+        android:id="@+id/mv_select_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/mv_select_location"
+        android:layout_alignBottom="@+id/mv_select_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+
+        <ImageView
+            android:id="@+id/img_LocationPinCenter"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_location_pin" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_change_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_select_location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_current_location"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_my_location" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_change_route"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:src="@drawable/ic_change_route" />
+
+        <TextView
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Route"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_select_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_done"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_pick_points"
+        android:outlineProvider="background">
+
+        <RelativeLayout
+            android:id="@+id/rl_pick_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl_pick_route_icons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/icon_pick_start_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_start_point" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/icon_pick_end_point"
+                    android:layout_below="@+id/icon_pick_start_point"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_timeline" />
+
+                <ImageView
+                    android:id="@+id/icon_pick_end_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_end_point" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/rl_pick_route_icons">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_point_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toStartOf="@+id/iv_start_point">
+
+                    <TextView
+                        android:id="@+id/start_point"
+                        style="@style/tv_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="ROUTE START POINT"
+                        android:textColor="@color/black80"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintBottom_toTopOf="@+id/start_point_location"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/start_point_location"
+                        style="@style/tv_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="Adjust the marker on map and press add button"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/start_point" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/iv_start_point"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_above="@+id/divider"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_add_point" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:dividerColor="@color/black20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_point_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/iv_end_point">
+
+                    <TextView
+                        android:id="@+id/end_point"
+                        style="@style/tv_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="ROUTE END POINT"
+                        android:textColor="@color/black80"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintBottom_toTopOf="@+id/end_point_location"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/end_point_location"
+                        style="@style/tv_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="Adjust the marker on map and press add button"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/end_point" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/iv_end_point"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_below="@+id/divider"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/icon_add_point" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/tb_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/bg_toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:paddingStart="@dimen/_40sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_12sdp">
+
+            <TextView
+                style="@style/tv_style"
+                android:layout_centerInParent="true"
+                android:text="DONE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_pick_points"
+        android:elevation="@dimen/_4sdp"
+        android:outlineProvider="background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_10sdp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_search_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="Search place"
+                android:textColorHint="@color/black50"
+                app:boxStrokeColor="@color/white"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/red"
+                android:gravity="center"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shadow_down"
+                    android:fontFamily="@font/roboto"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_locations"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_below="@+id/edt_search_places"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_pick_points"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_location"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/primary"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black20"
+        android:visibility="gone"
+        android:elevation="@dimen/_10sdp"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:indeterminateTint="@color/primary" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<resources>
+    //////////////test ids////////////////////////
+<!--        <string name="admob_nativeid">ca-app-pub-3940256099942544/2247696110</string>-->
+<!--        <string name="admob_interstitialid">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--        <string name="admod_appopen">ca-app-pub-3940256099942544/3419835294</string>-->
+<!--        <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--        <string name="admob">ca-app-pub-2867991109567972~5738550522</string>-->
+    //////////////live ids////////////////////////
+    <string name="admob_nativeid">ca-app-pub-3728514030691835/6840881849</string>
+    <string name="admob_interstitialid">ca-app-pub-3728514030691835/2691514154</string>
+    <string name="admod_appopen">ca-app-pub-3728514030691835/9065350818</string>
+    <string name="banner_id">ca-app-pub-3728514030691835/8329223338</string>
+    <string name="admob">ca-app-pub-3728514030691835~3984167104</string>
+    ///////////////////////////////////////
+    <string name="app_name">RYDEA</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="places_api_key">Pakistan</string>
+    <string name="ROUTE">Route</string>
+    <string name="TRIP_INFO_MERGED">tripInfoMerged</string>
+    <string name="BOOKING_REQUEST">booking_request</string>
+    <string name="FCM_KEY">fcm_server_key</string>
+    <string name="PASSENGER_ID">passenger_id</string>
+    <string name="TRIPS">trips</string>
+    <string name="DRIVER_ID">driver_id</string>
+    <string name="USERS">users</string>
+    <string name="MALE">male</string>
+    <string name="FEMALE">female</string>
+    <string name="KIDS">kids</string>
+    <string name="REMAINING_SEATS">remaining_seats</string>
+    <string name="PICK_LOCALITY">pick_locality</string>
+    <string name="BOOKING_REQUEST_DETAILS">booking_request_details</string>
+    <string name="title_activity_rider_profile">RiderProfile</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="privacy_policy"><b>\nGlobal Privacy Notice for Passengers and Riders</b>
+\n\nThis Privacy Policy describes how and when Ride Share and Car Pool App collects, uses, and shares your information when you use android applications offered by Ride Share &amp; Car Pool App account.  We receive your information through our mobile applications. Irrespective of which country you reside in or supply information from, the information provided by you is utilized by us in its own capacity and is not shared with anyone. This privacy page lets you know how we assure to look after your personal data. This notice tells you things like what information we use to provide you with our bundle of transportation services, how we use your information to keep you safe, and the choices and controls available to you. This notice also tells you about your privacy rights and how data protection rules work to protect everyone.
+\n\nThe term “you” or “your” refers to the passenger or rider who requests, hires and/or receives a transportation service
+        <b>\n\n1. Personal data we process<br /></b>
+\n\nWe only process information that we need, so we can provide you with the best service on our transportation marketplace.
+\n\n\u25CF Contact details: like name, phone number and e-mail address.For some of our services we might require a little more, like your home address.
+\n\n\u25CF Profile information: things like your profile picture, saved addresses, language and communication preferences.
+\n\n\u25CF Location: such as where you need a ride from, or the location of nearby Rider, the time, the journey progression and the final destination of your trip.
+\n\n\u25CF Limited identification data of the device, like the IP address, on which the app has been installed
+\n\n\u25CF Other user-generated content such as photos of parked e-vehicles.
+<b>\n\n2. Purpose of the processing</b>
+\n\nWe process your personal data so we can provide you with one or more of our transportation services:
+<b>\n\n\u25CF We connect you with a driver, help find ride share:</b>We collect and process personal data for the purpose of connecting passengers with drivers so you can be picked up and dropped off as per your selected route schedule.
+<b>\n\n\u25CF We get you to where you want to go: </b>We display geolocation data and the phone number of Drivers to passengers for communication.
+        <b>\n\n\u25CF We make sure the app is optimal:</b>We use contact details to notify passengers and riders of updates regarding this app.
+        <b>\n\n\u25CF We make sure your ride is the quickest, cheapest and most convenient to you</b>
+        <b>\n\n3. Legal Basis</b>
+\n\nWe are allowed to use personal information in the ways described above if we have a proper reason to do so. We always make sure we have a good reason for doing anything with your data.
+\n\n\u25CF Personal data is generally processed in order to provide the services contracted through app with you. This means that to give you the service we promised you, and to meet our terms and conditions, we’ll process your personal data to meet those obligations.
+\n\nWe may from time to time rely on alternative legal bases when:
+\n\n\u25CF it is necessary to comply with a legal obligation such as for processing data when the law requires it, including, for example, if there is a valid legal request to disclose personal information to a third party such as a Court or regulatory authority;
+\n\n\u25CF to protect your vital interests, or those of others, for example in the event of an emergency or an imminent threat to life; or
+\n\n\u25CF You have given us clear consent to do so for another specific purpose in which you have been fully informed.
+\n\nIf you choose not to give us personal information it may prevent us from fulfilling the contract with you, or stop us doing something expected of us in law. It may also mean that we cannot operate your account.
+        <b>\n\n4. Security and access</b>
+\n\n\u25CF Any personal data collected in the course of providing our services is transferred to and stored in the data servers
+\n\n\u25CF For our research and scientific purposes, all data, like bulk geolocation data, is anonymize so you can never be identified from it.
+        <b>\n\n5. Your rights and controls</b>
+\n\nYour right of access
+\n\n\u25CF You can access your personal data via app
+\n\n\u25CF You can access and update your personal data via the app. You have the right to ask us to rectify information you think is otherwise inaccurate. You also have the right to ask us to complete information you think is incomplete.
+\n\nYour right to erasure
+\n\n\u25CF You have the right to ask us to erase your personal information in certain circumstances.
+\n\nYour right to restriction of processing
+\n\n\u25CF You have the right to ask us to restrict the processing of your information in certain circumstances. This means that your data can only be used for certain things, such as legal claims or to exercise legal rights.
+        <b>\n\n6. Retention</b>
+\n\n\u25CF Your personal data will be stored as long as you have an active passenger account. If your account is closed, personal data will be deleted (according to our retention schedule and rules), unless such data is still required to meet any legal obligation, or for accounting, dispute resolution or fraud prevention purposes.
+\n\n\u25CF In the event that there are suspicions of a criminal offence, fraud or false information having been provided, the data will be stored as long as necessary according to the internal, legal, and regulatory requirements.
+\n\nPlease note that the uninstallation of app in your device does not cause the deletion of your personal data.
+        <b>\n\n7. Direct marketing</b>
+\n\n\u25CF We may send direct marketing messages to your e-mail address and/or phone number when you have given us permission to do so.
+        <b>\n\n8. Automated decision making</b>
+\n\nWe use help of automated decision-making in case of issuing warnings and implementing ride hailing service suspension. You will always have the right for human review of the decision and to contest the decision, express your point of view and obtain an explanation by contacting our customer support in our app.
+        <b>\n\n9. Making this notice great</b>
+\n\nWe hope you have found this privacy notice easy to understand.
+\n\nData protection laws are important. They strengthen rules and enhance your information rights. Many of these rules may appear complicated, but most are grounded in common sense. We take our responsibilities with your data seriously. We will continue to make changes to this privacy notice as part of our commitment to protecting your privacy and affording you even more transparency.
+</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="PASSENGER_MODE">passenger_mode</string>
+    <string name="RIDER_MODE">rider_mode</string>
+    <string name="BIKE">Bike</string>
+    <string name="CAR">Car</string>
+    <string name="SUV">SUV</string>
+    <string name="TRIP_ID">trip_id</string>
+    <string name="BOOKING_REQUEST_CANCELLED">BookingRequestCancelled</string>
+    <string name="CARPOOL_DB">CarpoolDatabase</string>
+    <string name="FCM_TOKEN">fcm_token</string>
+    <string name="ACTIVE">active</string>
+    <string name="UPDATE_REQUIRED">update_required</string>
+    <string name="REQUIRED">required</string>
+    <string name="facebook_id">391350963163743</string>
+    <string name="API_KEYS">keys</string>
+    <string name="GOOGLE_API_KEYS">google_api_keys</string>
+    <string name="PLACES_API_KEY">places_api_key</string>
+    <string name="FUEL_PRICE">fuelPrice</string>
+    <string name="PRICE">price</string>
+    <string name="ONE_TIME">One Time</string>
+    <string name="DAILY">Daily</string>
+    <string name="APP_VERSION">app_version</string>
+
+</resources>

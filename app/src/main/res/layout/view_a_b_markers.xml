@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+>
+
+
+    <ImageView
+        android:id="@+id/iv_marker_image"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:layout_height="@dimen/_15sdp"
+
+        />
+    <TextView
+        android:id="@+id/tv_marker_name"
+        style="@style/tv_style"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/_10ssp"
+        android:layout_centerInParent="true"/>
+    <!--        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"-->
+
+</RelativeLayout>

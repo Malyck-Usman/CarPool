@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <com.faltenreich.skeletonlayout.SkeletonLayout
+            android:id="@+id/skeleton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/cv_search_ride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:background="@drawable/bg_shadow"
+        android:outlineProvider="background">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_driver_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_driver_image"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:src="@drawable/dummy_image" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_toStartOf="@+id/ll_route"
+                            android:layout_toEndOf="@+id/iv_driver_image"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_driver_name"
+                                style="@style/tv_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:maxLines="1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_vehicle_name"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_vehicle_name"
+                                style="@style/tv_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_driver_name" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_route"
+                            android:layout_width="@dimen/_75sdp"
+                            android:layout_height="@dimen/_37sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="@drawable/bg_shadow_black"
+                            android:gravity="center"
+                            android:outlineProvider="background">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center"
+                                android:text="BOOK NOW"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_8sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <!--                        <ImageView-->
+                        <!--                            android:id="@+id/iv_route"-->
+                        <!--                            android:layout_width="@dimen/_25sdp"-->
+                        <!--                            android:layout_height="@dimen/_25sdp"-->
+                        <!--                            android:layout_alignParentEnd="true"-->
+                        <!--                            android:layout_centerVertical="true"-->
+                        <!--                            android:layout_marginEnd="@dimen/_15sdp"-->
+                        <!--                            android:src="@drawable/icon_route" />-->
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_minimized_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_below="@id/cv_driver_info"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_route_icons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icon_start_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/icon_start_point" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/icon_end_point"
+                            android:layout_below="@+id/icon_start_point"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/icon_timeline"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/icon_end_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/icon_end_point" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/rl_route_icons">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:id="@+id/pick_up"
+                                style="@style/tv_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="PICK UP"
+                                android:textColor="@color/black80"
+                                android:textSize="@dimen/_10ssp"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_start_point_ride_detail"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_distance"/>
+
+                            <TextView
+                                android:id="@+id/tv_start_point_ride_detail"
+                                style="@style/tv_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:maxLines="2"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="PICK LOCATION HERE\n SOME TEXT HERE"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/pick_up"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_distance"/>
+                            <TextView
+                                android:id="@+id/tv_distance"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:background="@drawable/bg_distance"
+                                android:gravity="center"
+                                android:textColor="@color/black80"
+                                android:fontFamily="@font/roboto"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_8sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:dividerColor="@color/secondary" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                            <TextView
+                                android:id="@+id/drop_off"
+                                style="@style/tv_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:text="DROP OFF"
+                                android:textColor="@color/black80"
+                                android:textSize="@dimen/_10ssp"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_drop_off_ride_detail"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_drop_off_ride_detail"
+                                style="@style/tv_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:maxLines="2"
+                                android:text="DROP LOCATION HERE\n SOME TEXT HERE"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/drop_off" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_expended_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_minimized_view"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Departure_time_ride_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/tv_departure_time"
+                            style="@style/tv_style"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Departure Time"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_departure_time_ride_detail"
+                            style="@style/tv_style"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/tv_departure_time"
+                            android:gravity="end"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_departure_time_ride_detail"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:dividerColor="@color/black20" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Departure_date_ride_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_Departure_time_ride_detail"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/tv_departure_date"
+                            style="@style/tv_style"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Departure Date"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_my_departure_date_ride_detail"
+                            style="@style/tv_style"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/tv_departure_date"
+                            android:gravity="end"
+                            android:textColor="@color/black" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_my_departure_date_ride_detail"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:dividerColor="@color/black20" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_trip_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_Departure_date_ride_detail"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/txt_trip_type"
+                            style="@style/tv_style"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Trip Type"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_trip_type"
+                            style="@style/tv_style"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/txt_trip_type"
+                            android:gravity="end"
+                            android:textColor="@color/black" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_trip_type"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:dividerColor="@color/black20" />
+
+                    </RelativeLayout>
+
+
+                    <!--            <RelativeLayout-->
+                    <!--                android:id="@+id/rl_seating_capacity_ride_detail"-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_below="@+id/rl_Departure_date_ride_detail"-->
+                    <!--                android:layout_marginTop="@dimen/_5sdp"-->
+
+                    <!--                >-->
+
+                    <!--                <TextView-->
+                    <!--                    style="@style/tv_style"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_centerVertical="true"-->
+                    <!--                    android:layout_marginStart="@dimen/_5sdp"-->
+                    <!--                    android:text="Seating Capacity"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="@dimen/_14ssp" />-->
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/tv_seating_capacity_ride_detail"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:layout_centerVertical="true"-->
+                    <!--                    android:layout_marginEnd="@dimen/_10sdp"-->
+                    <!--                    android:background="@color/transparent"-->
+                    <!--                    android:fontFamily="@font/roboto"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textColorHint="@color/white50" />-->
+
+                    <!--                <com.google.android.material.divider.MaterialDivider-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/tv_seating_capacity_ride_detail"-->
+                    <!--                    android:layout_marginTop="@dimen/_15sdp"-->
+                    <!--                    app:dividerColor="@color/white20" />-->
+
+                    <!--            </RelativeLayout>-->
+                    <RelativeLayout
+                        android:id="@+id/rl_seats_available_ride_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_trip_type"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/tv_available_seats"
+                            style="@style/tv_style"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Available seats"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_seats_available_ride_detail"
+                            style="@style/tv_style"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/tv_available_seats"
+                            android:gravity="end"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_seats_available_ride_detail"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:dividerColor="@color/black20" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_charges_ride_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_seats_available_ride_detail"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/tv_charges_per_km"
+                            style="@style/tv_style"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Charges (per km)"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_charges_ride_details"
+                            style="@style/tv_style"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/tv_charges_per_km"
+                            android:gravity="end"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_charges_per_km"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:dividerColor="@color/black20" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_min_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_expended_view"
+                    android:layout_marginTop="@dimen/_3sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_min_max"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_down"
+                        app:tint="@color/black" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+    </FrameLayout>
+        </com.faltenreich.skeletonlayout.SkeletonLayout>
+</RelativeLayout>

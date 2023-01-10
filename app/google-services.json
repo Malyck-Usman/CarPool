@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "879946270750",
+    "project_id": "carpooling-354911",
+    "storage_bucket": "carpooling-354911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879946270750:android:763bf4a3b688dce99b460f",
+        "android_client_info": {
+          "package_name": "com.sharerideexpense.easycarpool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879946270750-u79kk1qics0kgoac4hpp1688avp2ehn0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sharerideexpense.easycarpool",
+            "certificate_hash": "48607c5aaf531f455e8e7379c05bc58539605910"
+          }
+        },
+        {
+          "client_id": "879946270750-sdst9rltoa5v8dg455hme9tnadvo1kte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeiO4f57Fpxkqyro44HiNWoutKSUqPGAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879946270750-sdst9rltoa5v8dg455hme9tnadvo1kte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

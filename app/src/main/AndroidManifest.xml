@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sharerideexpense.easycarpool">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".Activities.ApplicationController"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarPool">
+        <activity
+            android:name=".UserPanel.Activities.OnBoardingPassenger"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".DriverPanel.Activities.OnBoardingRider"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Activities.PrivacyPolicy"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.SelectMode"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DriverPanel.Activities.RiderProfile"
+            android:exported="false"
+            android:label="@string/title_activity_rider_profile"
+            android:theme="@style/Theme.CarPool.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.ForgetPassword"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DriverPanel.Activities.RequestMapDetail"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name="com.sharerideexpense.easycarpool.Services.NotificationReceiverService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".UserPanel.Activities.BookingStatus"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserPanel.Activities.RideDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DriverPanel.Activities.ChooseLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UserPanel.Activities.UserSearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DriverPanel.Activities.CreateTrip"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_id" />
+
+        <activity
+            android:name=".DriverPanel.Activities.RideRequests"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DriverPanel.Activities.MyRides"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Signin"
+            android:exported="true"
+            android:screenOrientation="portrait">
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Signup"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

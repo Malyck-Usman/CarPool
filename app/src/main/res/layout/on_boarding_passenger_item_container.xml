@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+
+    >
+
+    <ImageView
+        android:id="@+id/img_banner"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_centerInParent="true"
+
+         />
+    <RelativeLayout
+        android:id="@+id/rl_txt_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:text="Let's Ride"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/_16ssp"
+            android:id="@+id/txt_lets_ride"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@+id/txt_lets_ride"
+            android:fontFamily="@font/roboto"
+            android:text="Ride Share"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/_30ssp"
+            android:id="@+id/txt_ride_share"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@+id/txt_ride_share"
+            android:fontFamily="@font/roboto"
+            android:text="We Will Take You Anywhere"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/txt_slogan"
+            android:textSize="@dimen/_12ssp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/_80sdp"
+    >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:textColor="@color/white80"
+            android:textSize="@dimen/_12ssp" />
+</RelativeLayout>
+</RelativeLayout>

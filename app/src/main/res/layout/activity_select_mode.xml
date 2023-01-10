@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context="com.sharerideexpense.easycarpool.Activities.SelectMode">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_enter_app_as"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_above="@+id/img_car"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:src="@drawable/app_icon" />
+
+        <ImageView
+            android:id="@+id/img_car"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/car_icon" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/txt_rideshare"-->
+        <!--            style="@style/tv_style"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="@dimen/_20sdp"-->
+        <!--            android:text="RYDEA"-->
+        <!--            android:textColor="@color/primary"-->
+        <!--            android:textSize="@dimen/_30ssp" />-->
+
+        <TextView
+            android:id="@+id/txt_get_there"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_car"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/bariol"
+            android:text="Ride Share And Carpooling App"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/txt_pak"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_get_there"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/bariol"
+            android:text="PAKISTAN"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_34ssp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_enter_app_as"
+        style="@style/tv_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_mode_buttons"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:text="Use App As"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp" />
+
+    <LinearLayout
+        android:id="@+id/ll_mode_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_btn_black_rounded"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:id="@+id/ll_passenger"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="49.5"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <TextView
+                style="@style/tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSENGER"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_weight="1"
+            android:background="@color/primary" />
+
+        <LinearLayout
+            android:id="@+id/ll_rider"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="49.5"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <TextView
+                style="@style/tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DRIVER"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.gms.ads.nativead.NativeAdView
+        android:id="@+id/native_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240sdp"
+        android:background="@drawable/gnt_outline_shape"
+        android:padding="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ad_notification_view"
+                android:layout_width="@dimen/gnt_ad_indicator_width"
+                android:layout_height="@dimen/gnt_ad_indicator_height"
+                android:layout_marginTop="@dimen/gnt_ad_indicator_top_margin"
+                android:background="@drawable/gnt_rounded_corners_shape"
+                android:gravity="center"
+                android:text="Ad"
+                android:textColor="@color/gnt_ad_green"
+                android:textSize="@dimen/gnt_ad_indicator_text_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/ad_notification_view"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/icon"
+                android:background="@color/gnt_white"
+                android:textColor="@color/gnt_gray"
+                android:textSize="@dimen/gnt_text_size_large"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/primary"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/icon"
+                android:background="@color/gnt_white"
+                android:lines="1"
+                android:numStars="0"
+                android:textColor="@color/gnt_gray"
+                android:textSize="@dimen/gnt_text_size_small" />
+
+            <TextView
+                android:id="@+id/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/primary"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/icon"
+                android:background="@color/gnt_white"
+                android:gravity="top"
+                android:lines="1"
+                android:textColor="@color/gnt_gray"
+                android:textSize="@dimen/gnt_text_size_small" />
+
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/gnt_default_margin"
+                android:paddingBottom="@dimen/gnt_default_margin" />
+
+            <com.google.android.gms.ads.nativead.MediaView
+                android:id="@+id/media_view"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/cta"
+                android:layout_below="@+id/body" />
+
+            <Button
+                android:id="@+id/cta"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/primary"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/gnt_white" />
+
+        </RelativeLayout>
+    </com.google.android.gms.ads.nativead.NativeAdView>
+</merge>
